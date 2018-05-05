@@ -62,13 +62,40 @@ h1 .bottom{
 
 /*header--------------------------------------*/
 
+
 header {
 	position: absolute;
 	top: 40px;
 	left: 0;
 	right: 0;
-	z-index: 99;
+	z-index: 9999;
+}
 
+
+#header.default{
+	height: 40px;
+	width: 100%;
+	margin-left: -110px;
+	position: fixed;
+	top: 0;
+	background: #fff;
+
+}
+
+#header.default a{
+	color: #555555;
+}
+
+#header.default a:hover{
+	color: #c0301c;
+}
+
+#header.default .navigation {
+	margin-right: 110px;
+}
+
+#header.default .logo {
+	margin-left: 110px;
 }
 
 .header-wrap{
@@ -87,6 +114,7 @@ header {
 .menu{
 	list-style: none;
 	display: flex;
+
 }
 
 .menu-item {
@@ -287,6 +315,7 @@ header {
 
 .tint{
 	height: 250px;
+	width: 264px;
 	position: absolute;
     left:0;
     bottom:0;
@@ -345,6 +374,18 @@ header {
 /*--------------latest works------------*/
 .latest-works {
 	padding-bottom: 75px; 
+}
+
+
+.tab-wrap {
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 24px;
+	margin-top: -40px;
+}
+
+.box-tab-cont {
+	margin-top: 70px;
 }
 
 .all-works {
@@ -595,9 +636,12 @@ hr {
 }
 
 .brands {
+	display: flex;
 	padding-top: 105px;
+	margin-left: 100px;
 	text-align: center;
 }
+
 
 .brands a{
 	margin: 0 30px;
@@ -752,10 +796,14 @@ footer {
 	text-align: center;
 }
 
+.footer-wrap{
+	background-color: #c0301c;
+	padding-top: 100px;
+}
 
 .footer-socials{
 	display: flex;
-	width: 170px;
+	width: 190px;
 	margin-left: 470px;
 	justify-content: space-between;
 }
@@ -770,16 +818,58 @@ footer {
 	border: 2px solid #ffffff;
 	border-radius: 50%;
 	text-align: center;
-	padding-top: 7px;
+	padding-top: 7px; 
 }
 
-
-.footer-wrap{
-	background-color: #c0301c;
-	padding-top: 100px;
-}
-
-.section-text{
+.footer-text{
 	color: #ffffff;
 }
 
+.footer-text:before{
+	content: "";
+	display: block;
+	width: 50px;
+	height: 2px;
+	margin: 25px auto 25px;
+	background-color: #fff;
+}
+
+/*-----------------tabs------------*/
+
+.nav-tab-list {
+	list-style: none;
+	text-align: center;
+}
+
+.nav-tab-list__item.active .nav-tab-list__link {
+	color: #c0301c;
+}
+
+.nav-tab-list__item {
+	display: inline-block;
+	margin: 0 10px;
+}
+
+.nav-tab-list__link:hover {
+	color: #c0301c;
+}
+
+.nav-tab-list__link {
+	color: #555555;
+}
+
+
+.hide {
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 0;
+	width: 0;
+	overflow: hidden;
+	z-index: -1;
+	opacity: 0;
+}
+
+.tab-cont.hide {
+	opacity: 0;
+}

@@ -9,36 +9,37 @@
 	<link rel="stylesheet" type="text/css" href="css/normalize.css"/>
 	<link rel="stylesheet" type="text/css" href="css/style.css" />
 	<link rel="stylesheet" type="text/css" href="css/icomoon.css"/>
+	<link rel="stylesheet" type="text/css" href="css/slick.css"/>
 	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
 </head>
 <body>
 		
 <header>
 	<div class="wrapper">
-		<div class="header-wrap">
+		<div class="header-wrap" id="header">
 			<div class="logo"><a href="#">Startup</a></div>
 			<nav class="navigation">
 			<ul class="menu">
 				<li class="menu-item">
-					<a href="#" class="menu-link">Home</a>
+					<a href="#home" class="menu-link" data-target="anchor">Home</a>
 				</li>
 				<li class="menu-item">
-					<a href="#" class="menu-link"> Services</a>
+					<a href="#services" class="menu-link" data-target="anchor"> Services</a>
 				</li>
 				<li class="menu-item">
-					<a href="#" class="menu-link">About</a>
+					<a href="#about" class="menu-link" data-target="anchor">About</a>
 				</li>
 				<li class="menu-item">
-					<a href="#" class="menu-link">Works</a>
+					<a href="#works" class="menu-link" data-target="anchor">Works</a>
 				</li>
 				<li class="menu-item">
-					<a href="#" class="menu-link">Blog</a>
+					<a href="#blog" class="menu-link" data-target="anchor">Blog</a>
 				</li>
 				<li class="menu-item">
-					<a href="#" class="menu-link">Clients</a>
+					<a href="#clients" class="menu-link" data-target="anchor">Clients</a>
 				</li>
 				<li class="menu-item">
-					<a href="#" class="menu-link">Contact</a>
+					<a href="#contacts" class="menu-link" data-target="anchor">Contact</a>
 				</li>
 			</ul>	
 			</nav>
@@ -46,7 +47,7 @@
 	</div>
 </header>
 
-<section class="banner">
+<section class="banner" id="home">
 	<div class="wrapper">
 		<h1>
 			<span class="top">Welcome to STARTUP</span>
@@ -56,7 +57,8 @@
 	</div>
 </section>
 
-<section class="title services">
+
+<section class="services" id="services">
 	<div class="wrapper">
 		<div class="title-wrap">
 			<span class="section-name">Services</span>
@@ -66,11 +68,6 @@
 				</blockquote>
 			</div>
 		</div>
-	</div>
-</section>
-
-<section class="services">
-	<div class="wrapper">
 		<div class="services-wrap">
 			<div class="service_item">
 				<div class="service_item_icon"><span class="icon-fa-font"></span></div>
@@ -91,7 +88,7 @@
 	</div>
 </section>
 
-<section class="about">
+<section class="about" id="about">
 	<div class="title-wrap">
 		<span class="section-name">About us</span>
 		<div class="section-text">
@@ -199,22 +196,60 @@
 					<p class="worker-title">John Doe</p>
 					<p>Front-end Developer</p>
 				</div>
+				<div class="worker">
+					<div class="worker-social">
+						<img src="img/team3.png">
+						<div class="tint">
+						</div>
+						<div class="socials-wrap">
+							<div>
+								<a href="#" class="sociallink"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+							</div>
+							<div>
+								<a href="#" class="sociallink"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+							</div>
+							<div>
+								<a href="#" class="sociallink"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+							</div>
+							<div>
+								<a href="#" class="sociallink"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+							</div>
+						</div>
+					</div>
+					<p class="worker-title">Shamim Mia</p>
+					<p>Sr. Web Developer</p>
+				</div>
 			</div>
 		</div>
 	</div>			
 </section>
 
-<section class="latest-works">
+<section class="latest-works" id="works">
 	<div class="wrapper">
 		<div class="title-wrap">
 			<span class="section-name">Latest Works</span>
-			<div class="section-text">
-				<blockquote>
-					All      Branding       Design       Development       Strategy
-				</blockquote>
-			</div>
 		</div>
-		<div class="all-works">
+		<div class="tab-wrap">
+					<ul class="nav-tab-list tabs">
+						<li class="nav-tab-list__item active">
+							<a href="#tab1" class="nav-tab-list__link">All</a>
+						</li>
+						<li class="nav-tab-list__item">
+							<a href="#tab2" class="nav-tab-list__link">Branding</a>
+						</li>
+						<li class="nav-tab-list__item">
+							<a href="#tab3" class="nav-tab-list__link">Design</a>
+						</li>
+						<li class="nav-tab-list__item">
+							<a href="#tab4" class="nav-tab-list__link">Development</a>
+						</li>
+						<li class="nav-tab-list__item">
+							<a href="#tab5" class="nav-tab-list__link">Strategy</a>
+						</li>
+					</ul>
+		<div class="box-tab-cont">
+		<div class="tab-cont" id="tab1">
+			<div class="all-works">
 			<div class="work-item">
 				<img src="img/work1.png">
 				<div class="work-tint"></div>
@@ -327,7 +362,14 @@
 					</button>
 				</div>
 			</div>
-		</div>	
+		</div>
+		</div>
+		<div class="tab-cont hide" id="tab2">tab2</div>
+		<div class="tab-cont hide" id="tab3">tab3</div>	
+		<div class="tab-cont hide" id="tab4">tab4</div>	
+		<div class="tab-cont hide" id="tab5">tab5</div>		
+		</div>
+		</div>
 	</div>
 </section>
 
@@ -340,7 +382,7 @@
 	</div>
 </section>
 
-<section class="blog">
+<section class="blog" id="blog">
 	<div class="wrapper">
 		<div class="title-wrap">
 			<span class="section-name">Recent blog posts</span>
@@ -388,21 +430,21 @@
 	</div>
 </section>
 
-<section class="partners">
+<section class="partners" id="clients">
 	<div class="wrapper">
 		<div class="brands">
-		<a href=""><img src="img/deorham.png"></a>
-		<a href=""><img src="img/ratings.png"></a>
-		<a href=""><img src="img/malikmedia.png"></a>
-		<a href=""><img src="img/bcause.png"></a>
-		<a href=""><img src="img/wompify.png"></a>
+		<div><a href="#"><img src="img/deorham.png" style="margin-top: 10px;"></a></div>
+		<div><a href="#"><img src="img/ratings.png"></a></div>
+		<div><a href="#"><img src="img/malikmedia.png" style="margin-top: 15px;"></a></div>
+		<div><a href="#"><img src="img/bcause.png" ></a></div>
+		<div><a href="#"><img src="img/wompify.png" style="margin-top: 5px;"></a></div>
 		</div>
 		<p class="quote">Hvaing placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. <br> Temporibus autem quibusdam et aut officiis debitis aut rerum”</p>
 		<p class="author">John Doe, Google Inc.</p>
 	</div>
 </section>
 
-<section class="contacts">
+<section class="contacts" id="contacts">
 	<div class="wrapper">
 		<div class="title-wrap">
 			<span class="section-name">Get in touch</span>
@@ -463,20 +505,19 @@
 		<div class="footer-wrap">
 			<div class="footer-socials">
 				<div><a href=""><i class="fa fa-twitter"></i></a></div>
-				<div><a href=""><i class="fa fa-twitter"></i></a></div>
-				<div><a href=""><i class="fa fa-twitter"></i></a></div>
-				<div><a href=""><i class="fa fa-twitter"></i></a></div>
+				<div><a href=""><i class="fa fa-facebook"></i></a></div>
+				<div><a href=""><i class="fa fa-linkedin"></i></a></div>
+				<div><a href=""><i class="fa fa-google-plus"></i></a></div>
 			</div>
-			<div class="section-text">
-				<blockquote>
-					© 2015 Startup, Designed by ShapedTheme
-				</blockquote>
+			<div class="footer-text">
+				© 2015 Startup, Designed by ShapedTheme
 			</div>
 		</div>
 	</div>
 </footer>
 
 <script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="js/slick.min.js"></script>
 <script type="text/javascript" src="js/custom.js"></script>
 
 </body>
